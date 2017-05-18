@@ -25,6 +25,11 @@
                 margin: auto;
             }
             
+            .jumbotron {
+                width: 92%;
+                margin: auto;
+            }
+            
             .floor-plan-img {
                 width: 90%;
                 margin: auto;
@@ -125,6 +130,8 @@
                     <p>Located at 1188 Cartwright Dr in Catawba, NC, this spacious home is located on the main channel of Lake Norman. Sitting on 1.62 acres, this mountain-like setting property has a number of wonderful features such as a floating slip and pier, an outdoor storage building, year-round foilage, and your own private tennis court.</p>
                 </div>
             
+            <br>
+            
             <!-- Carousel with best generic house pics -->
                 <div class="row">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -194,13 +201,34 @@
             <!-- Floorplan images -->
                 <div class="row floor-plans">
                     <div class="col-md-4">
-                        <a href="#floor-plan-lightbox1"><img class="floor-plan-img thumbnail" src="Images/basement-level.jpg"></a>
+                        <div class="thumbnail">
+                            <a href="#floor-plan-lightbox1">
+                                <img class="floor-plan-img img-responsive" src="Images/basement-level.jpg">
+                                <div clas="caption">
+                                    <p>Basement-level floor plan</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <a href="#floor-plan-lightbox2"><img class="floor-plan-img thumbnail" src="Images/ground-level.jpg"></a>
+                        <div class="thumbnail">
+                            <a href="#floor-plan-lightbox2">
+                                <img class="floor-plan-img" src="Images/ground-level.jpg">
+                                <div clas="caption">
+                                    <p>Ground-level floor plan</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <a href="#floor-plan-lightbox3"><img class="floor-plan-img thumbnail" src="images/Upper-Level.JPG"></a>
+                        <div class="thumbnail">
+                            <a href="#floor-plan-lightbox3">
+                                <img class="floor-plan-img" src="images/Upper-Level.JPG">
+                                <div clas="caption">
+                                    <p>Upper-level floor plan</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
         </div>
