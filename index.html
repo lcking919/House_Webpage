@@ -35,8 +35,39 @@
                 margin: auto;
             }
             
-            body {
-                background-color: darkgray;
+            .lightbox {
+                /** Default lightbox to hidden */
+                display: none;
+
+                /** Position and style */
+                position: fixed;
+                z-index: 999;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                top: 0;
+                left: 0;
+                background: rgba(0,0,0,0.8);
+            }
+            
+            .lightbox img {
+	           /** Pad the lightbox image */
+	           max-width: 90%;
+	           max-height: 80%;
+	           margin-top: 2%;
+            }
+            
+            .lightbox:target {
+                /** Remove default browser outline */
+                outline: none;
+
+                /** Unhide lightbox **/
+                display: block;
+            }
+            
+            html, body {
+                font-family: 'Raleway', sans-serif;
+                background-color: cadetblue;
             }
         
         </style>
@@ -160,16 +191,26 @@
             
             <div class="row floor-plans">
                 <div class="col-md-4">
-                    <img class="floor-plan-img" src="Images/basement-level.jpg">
+                    <a href="#floor-plan-lightbox1"><img class="floor-plan-img thumbnail" src="Images/basement-level.jpg"></a>
                 </div>
                 <div class="col-md-4">
-                    <img class="floor-plan-img" src="Images/ground-level.jpg">
+                    <a href="#floor-plan-lightbox2"><img class="floor-plan-img thumbnail" src="Images/ground-level.jpg"></a>
                 </div>
                 <div class="col-md-4">
-                    <img class="floor-plan-img" src="images/Upper-Level.JPG">
+                    <a href="#floor-plan-lightbox3"><img class="floor-plan-img thumbnail" src="images/Upper-Level.JPG"></a>
                 </div>
             </div>
         </div>
+        
+        <a href="#_" class="lightbox" id="floor-plan-lightbox1">
+            <img src="Images/basement-level.jpg">
+        </a>
+        <a href="#_" class="lightbox" id="floor-plan-lightbox2">
+            <img src="Images/ground-level.jpg">
+        </a>
+        <a href="#_" class="lightbox" id="floor-plan-lightbox3">
+            <img src="Images/Upper-Level.JPG">
+        </a>
         
         
     
